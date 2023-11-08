@@ -3,6 +3,6 @@
 Corey Rutt, Giovana Birck, Kaitlyn Cameron, Sara Shiojima
 D3 - Set H 
 
-##Description
+## Description
 Our Local Job Board simplifies job posting and searching. Interact with job listings, edit or delete your posts, and filter jobs by city or area for a convenient experience.
 
