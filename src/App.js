@@ -1,10 +1,26 @@
-import "./styles.css";
+import React, { useState } from 'react';
+
+import JobList from './components/JobList.js';
+import AddJob from './components/AddJob.js';
+
 
 export default function App() {
+  const [jobs, setJobs] = useState([]);
+
+  const addJob = (job) => {
+    setJobs([...jobs, job]);
+  };
+
+  const deleteJob = (index) => {
+    const newJobs = jobs.filter((_, idx) => idx !== index);
+    setJobs(newJobs);
+  };
+
   return (
     <div className="App">
-      <h1>This is our super fancy job board </h1>
-      <h2>Corey, Giovana, Kaitlyn & Sara </h2>
+      <p>Hello</p>
+      <AddJob addJob={addJob} />
+      <JobList jobs={jobs} deleteJob={deleteJob} />
     </div>
   );
 }
