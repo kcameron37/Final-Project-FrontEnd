@@ -1,0 +1,66 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the start of the container */
+    font-family: 'Rubik', sans-serif;
+    max-width: 900px; /* Adjust width as needed */
+    margin: auto;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    column-gap: 20px; /* Space between columns */
+    align-items: center; /* Aligns items vertically */
+    margin-bottom: 20px; /* Space before the image */
+  }
+  
+  .form > div:first-child {
+    grid-column: 1 / span 2; /* Company Name and Job Title on the first row */
+  }
+  
+  .form > div:nth-child(2) {
+    grid-column: 1 / span 2; /* Employment Type, Location, and Salary on the second row */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    column-gap: 20px; /* Space between columns */
+  }
+  
+  .form > div:nth-child(3) {
+    grid-column: 1 / span 2; /* Job Description on its own row */
+  }
+  
+  button {
+    grid-column: 1 / span 2; /* Button on its own row */
+    width: 100%;
+    /* Other button styles */
+  }
+  
+  /* Adjust input/select/textarea styles as needed */
+  
+  /* Style for the image container */
+  .formContainer > div:last-child {
+    align-self: center;
+    margin-left: auto; /* Push the image to the right */
+  }
+  
+  /* Image styles */
+  img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  @media (max-width: 768px) { /* Adjust for smaller screens */
+    .form {
+      grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
+    }
+  
+    .form > div {
+      grid-column: auto; /* Revert to automatic placement */
+    }
+  
+    .formContainer > div:last-child {
+      margin-left: 0;
+    }
+  }
+  

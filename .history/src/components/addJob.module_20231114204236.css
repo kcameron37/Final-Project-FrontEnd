@@ -1,0 +1,88 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Rubik', sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for inputs and select to appear side by side */
+  .form > div:first-child,
+  .form > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Individual input/select elements */
+  .formContainer input[type="text"],
+  .formContainer select {
+    flex: 1;
+    padding: 12px;
+    margin-right: 10px; /* Spacing between inline elements */
+    border: 1px solid #000;
+    border-radius: 0;
+    margin-bottom: 16px; /* Spacing between stacked elements */
+  }
+  
+  /* Last input/select element of a row doesn't need right margin */
+  .formContainer input[type="text"]:last-child,
+  .formContainer select:last-child {
+    margin-right: 0;
+  }
+  
+  /* Textarea occupies full width */
+  .formContainer textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+    border-radius: 0;
+    margin-bottom: 16px;
+  }
+  
+  /* Button occupies full width and adjusts placement */
+  .formContainer button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px; /* Added margin at the top */
+  }
+  
+  /* Adjustments for image to align to the right of the form */
+  .formContainer > div:last-child {
+    align-self: center;
+    margin-left: auto;
+    margin-top: -100%; /* Adjust this value to align with the form fields */
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .form > div:first-child,
+    .form > div:nth-child(2) {
+      flex-direction: column;
+    }
+  
+    .formContainer input[type="text"],
+    .formContainer select {
+      margin-right: 0; /* Remove right margin as they stack */
+    }
+  
+    .formContainer > div:last-child {
+      margin-top: 0;
+    }
+  }
+  

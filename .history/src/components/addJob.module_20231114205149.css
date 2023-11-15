@@ -1,0 +1,63 @@
+/* Change font family in here */
+* > * {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Just change the max-width so that it looks good */
+.container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.form-title {
+  margin: 0;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.input-container {
+  flex: 1;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.select-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.textarea-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  resize: none;
+  height: 120px;
+}

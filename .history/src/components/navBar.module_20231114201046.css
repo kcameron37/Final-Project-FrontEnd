@@ -1,0 +1,33 @@
+.logo{
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+  padding: 1em;
+}
+  
+.navBar {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navBar img {
+    height: 50px; 
+  }
+  
+  .navBar h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .navBar button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+

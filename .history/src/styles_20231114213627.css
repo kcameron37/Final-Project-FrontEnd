@@ -1,0 +1,13 @@
+.App {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Add this to your CSS file */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* Add any additional styling you want for your footer text */
+}

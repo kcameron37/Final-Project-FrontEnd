@@ -1,0 +1,74 @@
+.formContainer {
+    max-width: 1000px; 
+    margin: auto;
+  }
+  
+  /* jobList.module.css */
+  .jobListContainer {
+    max-width: 900px; /* This should match the .formContainer width */
+    margin: auto; /* This centers the container */
+    padding: 0 20px; /* Add padding if the Add Job container has it */
+  }
+
+.titleLine{
+    display: flex;
+}
+
+.jobItem {
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border: 1px solid #b7b7b7;
+  }
+  
+  .jobTitle {
+    font-size: 24px; 
+    margin-bottom: 10px;
+  }
+  
+  .companyInfo {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .companyName span {
+    font-size: 16px;
+    margin-right: 10px; 
+  }
+
+  .companyDetails{
+    margin-right: 40%;
+  }
+
+  .companyDetails span{
+    font-size: 16px;
+    margin-right: 10px; 
+    
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 8px 16px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 10px; 
+    margin-left: 8px; 
+  }
+  
+  .editButton {
+    background-color: rgb(231, 231, 231); 
+  }
+  
+  .deleteButton {
+    background-color:rgb(231, 231, 231); 
+  }
+  
+  .jobDescription {
+    font-size: 16px;
+  }

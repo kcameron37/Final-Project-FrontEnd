@@ -1,0 +1,59 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Main Container */
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px; /* Adjusted to 900px as per requirement */
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif; /* Font family changed to Rubik */
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+  
+  /* Input, Select, and Textarea styles */
+  .formContainer input[type="text"],
+  .formContainer select,
+  .formContainer textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+  
+  /* Textarea specific styles */
+  .formContainer textarea {
+    height: 120px; /* Height as specified */
+    resize: none; /* Make sure textarea is not resizable */
+  }
+  
+  /* Button styles */
+  .formContainer button {
+    width: 10em; /* Width as specified */
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Image styles */
+  .formContainer img {
+    max-width: 200px; /* Max width as specified */
+    margin-left: 20px;
+  }
+  
+  /* You might want to add the rest of your styles below */
+  
