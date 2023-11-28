@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import JobList from './components/JobList';
 import AddJob from './components/AddJob';
 import FilterComponent from './components/FilterComponent';
+import NavBar from './components/NavBar';
 
 export default function App() {
   const [jobs, setJobs] = useState([]);
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        <NavBar />
         <AddJob addJob={addJob} />
         <FilterComponent jobs={jobs} />
         <Routes>
