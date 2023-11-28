@@ -1,0 +1,5 @@
+.formContainer {
+    max-width: 1200px; /* Adjust as per your layout's width */
+  margin: 0 auto;
+  padding: 20px;
+}

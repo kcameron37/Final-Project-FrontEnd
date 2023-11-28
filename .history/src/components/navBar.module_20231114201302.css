@@ -1,0 +1,32 @@
+.logo{
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+  padding: 1em;
+}
+
+.logo h2 {
+  margin-left: 1em;
+  font-size: 32px;
+}
+  
+.navBar {
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navBar img {
+    height: 30px; 
+  }
+  
+  .navBar button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+

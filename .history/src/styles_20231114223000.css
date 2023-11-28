@@ -1,0 +1,13 @@
+.App {
+  font-family: 'Rubik', sans-serif;
+  padding-bottom: 50px; /* Adjust this value based on the height of your footer */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000; /* Adjust this value as needed */
+}

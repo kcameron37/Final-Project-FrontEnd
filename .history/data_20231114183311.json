@@ -1,0 +1,242 @@
+[
+    {
+      "id": 1,
+      "job_title": "Software Developer",
+      "company": "Tech Solutions Inc.",
+      "description": "We are seeking a talented software developer to join our dynamic team. The ideal candidate will have strong programming skills and a passion for creating innovative software solutions.",
+      "pay": "$80,000 - $100,000 per year",
+      "city": "Vancouver"
+    },
+    {
+      "id": 2,
+      "job_title": "Marketing Specialist",
+      "company": "Digital Marketing Agency",
+      "description": "Join our marketing team to develop and implement creative marketing strategies. The ideal candidate will have a strong understanding of digital marketing trends and excellent communication skills.",
+      "pay": "$60,000 - $75,000 per year",
+      "city": "Victoria"
+    },
+    {
+      "id": 3,
+      "job_title": "Customer Support Representative",
+      "company": "XYZ Corporation",
+      "description": "We are looking for a customer support representative to assist our clients with any inquiries or issues. Strong communication and problem-solving skills are essential for this role.",
+      "pay": "$45,000 - $55,000 per year",
+      "city": "Kelowna"
+    },
+    {
+      "id": 4,
+      "job_title": "Graphic Designer",
+      "company": "Creative Design Studio",
+      "description": "Join our design team and bring creativity to life. The ideal candidate will have a strong portfolio showcasing their design skills and a passion for visual aesthetics.",
+      "pay": "$50,000 - $65,000 per year",
+      "city": "Burnaby"
+    },
+    {
+      "id": 5,
+      "job_title": "Data Analyst",
+      "company": "Tech Analytics Ltd.",
+      "description": "We are seeking a data analyst to analyze and interpret complex data sets. The ideal candidate will have strong analytical skills and experience with data visualization tools.",
+      "pay": "$70,000 - $90,000 per year",
+      "city": "Surrey"
+    },
+    {
+      "id": 6,
+      "job_title": "Human Resources Manager",
+      "company": "HR Solutions Co.",
+      "description": "Join our HR team to manage recruitment, employee relations, and other HR functions. The ideal candidate will have HR management experience and strong interpersonal skills.",
+      "pay": "$75,000 - $90,000 per year",
+      "city": "Richmond"
+    },
+    {
+      "id": 7,
+      "job_title": "Sales Representative",
+      "company": "Sales Innovations Inc.",
+      "description": "We are looking for a motivated sales representative to drive sales and build relationships with clients. Sales experience and excellent communication skills are required.",
+      "pay": "$55,000 - $70,000 per year",
+      "city": "Abbotsford"
+    },
+    {
+      "id": 8,
+      "job_title": "Network Administrator",
+      "company": "IT Solutions Group",
+      "description": "Join our IT team to manage and maintain our network infrastructure. The ideal candidate will have strong networking skills and experience with network security.",
+      "pay": "$65,000 - $80,000 per year",
+      "city": "Kamloops"
+    },
+    {
+      "id": 9,
+      "job_title": "Content Writer",
+      "company": "Content Creations Co.",
+      "description": "We are seeking a creative and skilled content writer to develop engaging content for various platforms. Strong writing skills and creativity are essential for this role.",
+      "pay": "$45,000 - $60,000 per year",
+      "city": "Nanaimo"
+    },
+    {
+      "id": 10,
+      "job_title": "Financial Analyst",
+      "company": "Financial Strategies Ltd.",
+      "description": "Join our finance team to analyze financial data and provide insights for decision-making. The ideal candidate will have strong analytical skills and financial expertise.",
+      "pay": "$70,000 - $85,000 per year",
+      "city": "Prince George"
+    },
+    {
+      "id": 11,
+      "job_title": "Project Manager",
+      "company": "Project Solutions Co.",
+      "description": "We are looking for an experienced project manager to lead and coordinate projects from initiation to completion. Project management skills and leadership are essential.",
+      "pay": "$80,000 - $100,000 per year",
+      "city": "Vernon"
+    },
+    {
+      "id": 12,
+      "job_title": "UX/UI Designer",
+      "company": "User Experience Innovations",
+      "description": "Join our design team to create intuitive and visually appealing user interfaces. The ideal candidate will have a strong portfolio and expertise in UX/UI design.",
+      "pay": "$60,000 - $75,000 per year",
+      "city": "Penticton"
+    },
+    {
+      "id": 13,
+      "job_title": "Operations Manager",
+      "company": "Operations Excellence Co.",
+      "description": "We are seeking an operations manager to oversee daily operations and ensure efficiency. Strong organizational and leadership skills are crucial for this role.",
+      "pay": "$75,000 - $90,000 per year",
+      "city": "Port Coquitlam"
+    },
+    {
+      "id": 14,
+      "job_title": "Quality Assurance Analyst",
+      "company": "Quality Testing Solutions",
+      "description": "Join our QA team to ensure the quality of our software products. The ideal candidate will have strong testing skills and attention to detail.",
+      "pay": "$55,000 - $70,000 per year",
+      "city": "New Westminster"
+    },
+    {
+      "id": 15,
+      "job_title": "Social Media Manager",
+      "company": "Social Media Hub",
+      "description": "We are looking for a social media manager to develop and implement social media strategies. The ideal candidate will have a strong understanding of social media platforms.",
+      "pay": "$50,000 - $65,000 per year",
+      "city": "Langley"
+    },
+    {
+      "id": 16,
+      "job_title": "Legal Counsel",
+      "company": "Legal Solutions LLP",
+      "description": "Join our legal team to provide legal advice and support. The ideal candidate will have a law degree and experience in corporate law.",
+      "pay": "$80,000 - $95,000 per year",
+      "city": "Maple Ridge"
+    },
+    {
+      "id": 17,
+      "job_title": "Healthcare Administrator",
+      "company": "Healthcare Management Group",
+      "description": "We are seeking a healthcare administrator to manage the daily operations of our healthcare facility. Healthcare administration experience is required.",
+      "pay": "$70,000 - $85,000 per year",
+      "city": "Coquitlam"
+    },
+    {
+        "id": 18,
+        "job_title": "IT Security Specialist",
+        "company": "Security Solutions Inc.",
+        "description": "Join our IT security team to implement and maintain security measures. The ideal candidate will have expertise in cybersecurity.",
+        "pay": "$75,000 - $90,000 per year",
+        "city": "Squamish"
+      },
+      {
+        "id": 19,
+        "job_title": "Customer Success Manager",
+        "company": "Customer Success Co.",
+        "description": "We are looking for a customer success manager to ensure customer satisfaction and retention. Strong communication and relationship-building skills are essential.",
+        "pay": "$65,000 - $80,000 per year",
+        "city": "Chilliwack"
+      },
+      {
+        "id": 20,
+        "job_title": "E-commerce Specialist",
+        "company": "E-commerce Innovations Ltd.",
+        "description": "Join our e-commerce team to optimize online sales and enhance the user shopping experience. The ideal candidate will have expertise in e-commerce strategies.",
+        "pay": "$55,000 - $70,000 per year",
+        "city": "Nelson"
+      },
+      {
+        "id": 21,
+        "job_title": "Supply Chain Analyst",
+        "company": "Supply Chain Solutions Inc.",
+        "description": "We are seeking a supply chain analyst to optimize our logistics and distribution processes. Strong analytical skills and knowledge of supply chain management are required.",
+        "pay": "$70,000 - $85,000 per year",
+        "city": "Port Moody"
+      },
+      {
+        "id": 22,
+        "job_title": "Environmental Scientist",
+        "company": "Environmental Solutions Ltd.",
+        "description": "Join our environmental team to conduct research and analysis on environmental issues. The ideal candidate will have a background in environmental science.",
+        "pay": "$60,000 - $75,000 per year",
+        "city": "Fort St. John"
+      },
+      {
+        "id": 23,
+        "job_title": "Digital Content Producer",
+        "company": "Digital Media Productions",
+        "description": "We are looking for a digital content producer to create engaging multimedia content. The ideal candidate will have experience in video production and digital storytelling.",
+        "pay": "$50,000 - $65,000 per year",
+        "city": "White Rock"
+      },
+      {
+        "id": 24,
+        "job_title": "Biomedical Engineer",
+        "company": "Biomedical Innovations Ltd.",
+        "description": "Join our biomedical engineering team to design and develop medical devices. The ideal candidate will have a background in biomedical engineering.",
+        "pay": "$75,000 - $90,000 per year",
+        "city": "Williams Lake"
+      },
+      {
+        "id": 25,
+        "job_title": "Social Services Coordinator",
+        "company": "Community Services Organization",
+        "description": "We are seeking a social services coordinator to organize and implement community outreach programs. The ideal candidate will have a background in social work.",
+        "pay": "$55,000 - $70,000 per year",
+        "city": "Dawson Creek"
+      },
+      {
+        "id": 26,
+        "job_title": "Architectural Designer",
+        "company": "Architectural Innovations Co.",
+        "description": "Join our architectural design team to create innovative and functional building designs. The ideal candidate will have a strong portfolio in architectural design.",
+        "pay": "$65,000 - $80,000 per year",
+        "city": "Quesnel"
+      },
+      {
+        "id": 27,
+        "job_title": "Educational Consultant",
+        "company": "Education Solutions Ltd.",
+        "description": "We are looking for an educational consultant to provide expertise in curriculum development and instructional design. The ideal candidate will have a background in education.",
+        "pay": "$70,000 - $85,000 per year",
+        "city": "Powell River"
+      },
+      {
+        "id": 28,
+        "job_title": "Mobile App Developer",
+        "company": "Mobile Innovations Inc.",
+        "description": "Join our mobile app development team to create cutting-edge mobile applications. The ideal candidate will have expertise in mobile app development.",
+        "pay": "$80,000 - $95,000 per year",
+        "city": "Merritt"
+      },
+      {
+        "id": 29,
+        "job_title": "Fitness Trainer",
+        "company": "Fitness Solutions Co.",
+        "description": "We are seeking a fitness trainer to lead and inspire clients in achieving their fitness goals. The ideal candidate will have fitness certification and training experience.",
+        "pay": "$45,000 - $60,000 per year",
+        "city": "Salmon Arm"
+      },
+      {
+        "id": 30,
+        "job_title": "Tourism Coordinator",
+        "company": "Tourism Promotion Board",
+        "description": "Join our tourism team to coordinate and promote local tourism initiatives. The ideal candidate will have experience in tourism management.",
+        "pay": "$50,000 - $65,000 per year",
+        "city": "Revelstoke"
+      }
+    ]

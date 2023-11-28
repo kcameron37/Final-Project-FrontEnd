@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import styles from "./jobList.module.css";
 
 export default function JobList({ jobs, deleteJob }) {
   const { filterType, filterValue } = useParams();
@@ -10,20 +11,39 @@ export default function JobList({ jobs, deleteJob }) {
     : jobs;
 
   return (
-    <div>
-      <h2>Featured Jobs</h2>
-      {
-        filteredJobs.map((job, index) => (
-          <div key={index} className="job-item">
-            <h3>{job.jobTitle}</h3>
-            <button onClick={() => console.log('Make Edit Do Something')}>Edit</button>
-            <button onClick={() => deleteJob(index)}>Delete</button>
-            <p>{job.companyName} • {job.employment} • {job.location} • {job.salary}</p>
-            <p>{job.description}</p>
-            <hr />
+    <div className={styles.jobListContainer}>
+      <h2 className={styles.h2}>Featured Jobs</h2>
+      {filteredJobs.map((job, index) => (
+        <div key={index} className={styles.jobItem}>
+          <div className={styles.titleLine}>
+            <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
+            <button
+              className={styles.editButton}
+              onClick={() => console.log("Make Edit Do Something")}
+            >
+              Edit
+            </button>
+            <button
+              className={styles.deleteButton}
+              onClick={() => deleteJob(index)}
+            >
+              Delete
+            </button>
           </div>
-        ))
-      }
+
+          <div className={styles.companyInfo}>
+            <div className={styles.companyName}>
+              <span>{job.companyName}</span>
+            </div>
+            <div className={styles.companyDetails}>
+              <span>{job.employment}</span>
+              <span>{job.location}</span>
+              <span>{job.salary}</span>
+            </div>
+          </div>
+          <p className={styles.jobDescription}>{job.description}</p>
+        </div>
+      ))}
     </div>
   );
 }

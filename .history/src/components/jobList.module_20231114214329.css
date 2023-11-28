@@ -1,0 +1,57 @@
+/* jobList.module.css */
+.jobItem {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .jobTitle {
+    margin: 0;
+    color: #333; /* Adjust the color as needed */
+  }
+  
+  /* Buttons within job items */
+  .jobItem button {
+    padding: 8px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 8px; /* Add space above the button */
+    align-self: flex-start;
+  }
+  
+  /* Description and details */
+  .jobItem p {
+    margin: 8px 0; /* Give some space around the paragraph */
+    color: #666; /* Adjust the color as needed */
+  }
+  
+  /* Global box-sizing and font-family */
+  *:not(html):not(body) {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* You can adjust the container if it's needed in this component */
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* If you have a form inside this component, adjust accordingly */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 2;
+  }
+  

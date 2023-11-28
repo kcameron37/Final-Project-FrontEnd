@@ -1,0 +1,82 @@
+* > * {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 2;
+  }
+  
+  .formTitle {
+    margin: 0;
+  }
+  
+  .formRow {
+    display: flex;
+    width: 100%;
+    gap: 26px;
+    padding-bottom: 16px;
+  }
+  
+  .inputContainer {
+    flex: 1;
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .textInput {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+  
+  .selectInput {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+  
+  .textareaInput {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+    resize: none;
+    height: 120px;
+  }
+  
+  .button {
+    padding: 8px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+  
+  .imageWrap {
+    flex: 1;
+  }
+  
+  .image {
+    width: 70%;
+  }

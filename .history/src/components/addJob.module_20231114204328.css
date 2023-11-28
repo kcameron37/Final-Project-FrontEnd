@@ -1,0 +1,36 @@
+.formContainer {
+    max-width: 900px; 
+    display: flex; 
+    flex-direction: row; /* Direction changed to row for main container */
+    align-items: flex-start; /* Align items to the start of the container */
+    font-family: 'Rubik', sans-serif;
+  }
+
+  .formContainer img {
+    height: auto;
+  }
+
+  .formContainer input[type="text"],
+  .formContainer select,
+  .formContainer textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid black; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
+  }
+  
+  .formContainer textarea {
+    height: 120px; 
+  }
+  
+  .formContainer button {
+    width: 30%; 
+    padding: 10px; 
+    background-color: black; 
+    color: white; 
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,61 @@
+.formContainer {
+    max-width: 600px;
+    margin: 20px auto; /* Adjust the top and bottom margin as necessary */
+    font-family: 'Arial', sans-serif; /* Assuming a sans-serif font based on the image */
+  }
+  
+  .formContainer img {
+    height: auto;
+    max-width: 100%; /* Ensure the image is not larger than the container */
+  }
+  
+  .formContainer input[type="text"],
+  .formContainer select,
+  .formContainer textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000; /* Assuming a black border based on the image */
+    border-radius: 0; /* Assuming no border radius based on the image */
+    margin-bottom: 16px; /* Adjust spacing to match the layout in the image */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  .formContainer textarea {
+    height: 150px; /* Adjust the height to match the image */
+  }
+  
+  .formContainer button {
+    width: 100%; /* Button takes the full width in the image */
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0; /* Assuming no border radius based on the image */
+    cursor: pointer;
+    text-transform: uppercase; /* Assuming uppercase letters based on the image */
+    font-weight: bold; /* Assuming bold font based on the image */
+  }
+  
+  /* Additional styles for the layout */
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form > div {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically based on the image */
+    margin-bottom: 16px; /* Adjust spacing between input groups to match the image */
+  }
+  
+  /* Styles for the job board header */
+  .jobBoardHeader {
+    display: flex;
+    justify-content: space-between; /* Assuming there's space between the items in the header */
+    margin-bottom: 24px; /* Adjust spacing to match the image */
+    padding: 0 20px; /* Assuming some padding based on the image */
+  }
+  
+  /* You may need to add specific class or ID selectors for individual elements 
+     based on their appearance in the image. */
+  

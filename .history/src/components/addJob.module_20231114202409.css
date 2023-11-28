@@ -1,0 +1,46 @@
+.formContainer {
+    display: flex;
+    max-width: 600px;
+    margin: auto; 
+  }
+  
+  .formContainer > div {
+  
+  }
+  
+  .formContainer label {
+    display: block; /* Make the label take up the full width of its line */
+    margin-bottom: 5px; /* Space between the label and the input */
+  }
+  
+  .formContainer input[type="text"],
+  .formContainer select,
+  .formContainer textarea {
+    width: 100%; /* Make the input take up the full width of its parent div */
+    padding: 10px; /* Add some padding inside the inputs for better readability */
+    border: 1px solid #ccc; /* A subtle border for the inputs */
+    border-radius: 4px; /* Optional: rounded corners */
+    margin-bottom: 10px; /* Space after each input */
+  }
+  
+  .formContainer textarea {
+    height: 120px; /* Set a fixed height for the textarea */
+  }
+  
+  .formContainer button {
+    width: 100%; /* Make the button take up the full width */
+    padding: 10px; /* Padding for the button */
+    background-color: #000; /* Button color */
+    color: #fff; /* Text color for the button */
+    border: none;
+    border-radius: 4px; /* Optional: rounded corners for the button */
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  /* Ensure the image doesn't exceed the width of the form */
+  .formContainer img {
+    max-width: 100%;
+    height: auto;
+  }
+  

@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <Router>
-      <div>
+      <div className="App">
         <AddJob addJob={addJob} />
         <FilterComponent jobs={jobs} />
         <Routes>
