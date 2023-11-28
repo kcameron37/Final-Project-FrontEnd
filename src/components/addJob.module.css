@@ -1,27 +1,28 @@
 * > * {
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-  }
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
   
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
   
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex: 2;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 2;
+}
   
-  .formTitle {
-    margin: 0;
-  }
+.formTitle {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
   
   .formRow {
     display: flex;
