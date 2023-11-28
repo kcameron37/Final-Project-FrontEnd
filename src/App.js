@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import styles from './styles.css';
+import styles from "./styles.css";
 
-import JobList from './components/JobList.js';
-import AddJob from './components/AddJob.js';
-import NavBar from './components/NavBar.js';
-
+import JobList from "./components/JobList.js";
+import AddJob from "./components/AddJob.js";
+import NavBar from "./components/NavBar.js";
 
 export default function App() {
   const [jobs, setJobs] = useState([]);
