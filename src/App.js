@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import JobList from './components/JobList.js';
-import AddJob from './components/AddJob.js';
-
+import JobList from './components/JobList';
+import AddJob from './components/AddJob';
+import FilterComponent from './components/FilterComponent';
 
 export default function App() {
   const [jobs, setJobs] = useState([]);
@@ -17,10 +18,15 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <p>Hello</p>
-      <AddJob addJob={addJob} />
-      <JobList jobs={jobs} deleteJob={deleteJob} />
-    </div>
+    <Router>
+      <div>
+        <AddJob addJob={addJob} />
+        <FilterComponent jobs={jobs} />
+        <Routes>
+          <Route path="/" element={<JobList jobs={jobs} deleteJob={deleteJob} />} />
+          <Route path="/filter/:filterType/:filterValue" element={<JobList jobs={jobs} deleteJob={deleteJob} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
