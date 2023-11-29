@@ -16,7 +16,7 @@ export default function App() {
       setJobs(updatedJobs);
       setJobToEdit(null); 
     } else {
-      const newJobWithId = { ...job, id: Date.now() }; 
+      const newJobWithId = { ...job, id: Date.now() }; // Simple ID generation
       setJobs([...jobs, newJobWithId]);
     }
   };
