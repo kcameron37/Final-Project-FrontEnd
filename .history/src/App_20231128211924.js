@@ -14,9 +14,9 @@ export default function App() {
     if (jobToEdit) {
       const updatedJobs = jobs.map(j => (j.id === jobToEdit.id ? { ...j, ...job } : j));
       setJobs(updatedJobs);
-      setJobToEdit(null);
+      setJobToEdit(null); 
     } else {
-      const newJobWithId = { ...job, id: Date.now() };
+      const newJobWithId = { ...job, id: Date.now() }; 
       setJobs([...jobs, newJobWithId]);
     }
   };
@@ -27,7 +27,7 @@ export default function App() {
   };
 
   const updateJob = (jobId, updatedDetails) => {
-    const updatedJobs = jobs.map(job =>
+    const updatedJobs = jobs.map(job => 
       job.id === jobId ? { ...job, ...updatedDetails } : job
     );
     setJobs(updatedJobs);

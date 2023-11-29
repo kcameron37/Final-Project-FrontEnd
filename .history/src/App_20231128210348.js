@@ -14,20 +14,20 @@ export default function App() {
     if (jobToEdit) {
       const updatedJobs = jobs.map(j => (j.id === jobToEdit.id ? { ...j, ...job } : j));
       setJobs(updatedJobs);
-      setJobToEdit(null);
+      setJobToEdit(null); 
     } else {
-      const newJobWithId = { ...job, id: Date.now() };
+      const newJobWithId = { ...job, id: Date.now() }; 
       setJobs([...jobs, newJobWithId]);
     }
   };
 
-  const deleteJob = (jobId) => {
-    const updatedJobs = jobs.filter(job => job.id !== jobId);
-    setJobs(updatedJobs);
+  const deleteJob = (index) => {
+    const newJobs = jobs.filter((_, idx) => idx !== index);
+    setJobs(newJobs);
   };
 
   const updateJob = (jobId, updatedDetails) => {
-    const updatedJobs = jobs.map(job =>
+    const updatedJobs = jobs.map(job => 
       job.id === jobId ? { ...job, ...updatedDetails } : job
     );
     setJobs(updatedJobs);

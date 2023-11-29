@@ -33,6 +33,12 @@ export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
     setEditedJob({});
   };
 
+  const deleteJob = (jobId) => {
+    const updatedJobs = jobs.filter(job => job.id !== jobId);
+    setJobs(updatedJobs);
+  };
+
+
 
   return (
     <div className={styles.jobListContainer}>

@@ -95,24 +95,24 @@ export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
                 </button>
                 <button
                   className={styles.deleteButton}
-                  onClick={() => deleteJob(job.id)} // Pass the job's ID, not the index
+                  onClick={() => deleteJob(job.id)}
                 >
                   Delete
                 </button>
-
               </div>
               <div className={styles.companyInfo}>
-                <p>{job.companyName}</p>
-                <p>{job.employmentType}</p>
-                <p>{job.salary}</p>
-                <p>{job.location}</p>
+               <p>{job.companyName}</p>
+               <p>{job.description}</p>
+               <p>{job.description}</p>
+               <p>{job.description}</p>
+
               </div>
               <p className={styles.jobDescription}>{job.description}</p>
             </div>
           )}
         </div>
       ))}
-      <div className={styles.jobListContainer}>
+         <div className={styles.jobListContainer}>
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Software Developer</h3>
