@@ -70,7 +70,7 @@ export default function NavBar() {
               X
             </button>
             <div className={styles.popup}>
-              <p>Kaitlyn's Student Number A01326523</p>
+              <p>Student Number A01326523</p>
             </div>
           </div>
         )}

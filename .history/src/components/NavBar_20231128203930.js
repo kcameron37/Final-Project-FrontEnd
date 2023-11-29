@@ -58,7 +58,7 @@ export default function NavBar() {
               X
             </button>
             <div className={styles.popup}>
-              <p>Corey's Student Number A013347533</p>
+              <p>Corey's Student<br />Number A013347533</p>
             </div>
           </div>
         )}
@@ -70,7 +70,7 @@ export default function NavBar() {
               X
             </button>
             <div className={styles.popup}>
-              <p>Kaitlyn's Student Number A01326523</p>
+              <p>Kaitlyn's Student<br />Number A01326523</p>
             </div>
           </div>
         )}
@@ -82,7 +82,7 @@ export default function NavBar() {
               X
             </button>
             <div className={styles.popup}>
-              <p>Giovana's Student Number A01299565</p>
+              <p>Giovana's Student<br />Number A01299565</p>
             </div>
           </div>
         )}
@@ -94,7 +94,7 @@ export default function NavBar() {
               X
             </button>
             <div className={styles.popup}>
-              <p>Sara's Student Number A01314209</p>
+              <p>Sara's Student<br />Number A01314209</p>
             </div>
           </div>
         )}

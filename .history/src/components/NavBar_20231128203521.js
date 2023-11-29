@@ -50,51 +50,47 @@ export default function NavBar() {
         <h2>JOB BOARD</h2>
       </div>
 
-      <div>
-        <button onClick={() => togglePopup("corey")}>Corey J. Rutt</button>
+      <div className={styles.popupContainer}>
         {popups.corey && (
           <div className={`${styles.popupWrapper} ${styles.corey}`} ref={popupRefs.corey}>
             <button className={styles.closeButton} onClick={() => togglePopup("corey")}>
               X
             </button>
             <div className={styles.popup}>
-              <p>Corey's Student Number A013347533</p>
+              <p>Student Number A013347533</p>
             </div>
           </div>
         )}
 
-        <button onClick={() => togglePopup("kaitlyn")}>Kaitlyn Cameron</button>
         {popups.kaitlyn && (
           <div className={`${styles.popupWrapper} ${styles.kaitlyn}`} ref={popupRefs.kaitlyn}>
             <button className={styles.closeButton} onClick={() => togglePopup("kaitlyn")}>
               X
             </button>
             <div className={styles.popup}>
-              <p>Kaitlyn's Student Number A01326523</p>
+              <p>Student Number A01326523</p>
             </div>
           </div>
         )}
 
-        <button onClick={() => togglePopup("giovana")}>Giovana Birck</button>
         {popups.giovana && (
           <div className={`${styles.popupWrapper} ${styles.giovana}`} ref={popupRefs.giovana}>
             <button className={styles.closeButton} onClick={() => togglePopup("giovana")}>
               X
             </button>
             <div className={styles.popup}>
-              <p>Giovana's Student Number A01299565</p>
+              <p>Student Number A01299565</p>
             </div>
           </div>
         )}
 
-        <button onClick={() => togglePopup("sara")}>Sara Shiojima</button>
         {popups.sara && (
           <div className={`${styles.popupWrapper} ${styles.sara}`} ref={popupRefs.sara}>
             <button className={styles.closeButton} onClick={() => togglePopup("sara")}>
               X
             </button>
             <div className={styles.popup}>
-              <p>Sara's Student Number A01314209</p>
+              <p>Student Number A01314209</p>
             </div>
           </div>
         )}

@@ -34,19 +34,39 @@
   cursor: pointer;
   font-size: 16px;
   margin-right: 1em;
+}
 
+.popupContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 100%;
 }
 
 .popupWrapper {
-  position: absolute;
-  top: 100%; 
-  right: 10;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid black;
   padding: 10px;
-  z-index: 1; 
-  width: 15em; 
+  z-index: 1;
+  width: 12em;
+}
+
+.popupWrapper.corey {
+  left: 0;
+}
+
+.popupWrapper.kaitlyn {
+  left: 25%;
+}
+
+.popupWrapper.giovana {
+  left: 50%;
+}
+
+.popupWrapper.sara {
+  left: 75%;
 }
 
 .popup {
@@ -76,31 +96,3 @@
   border: none;
   cursor: pointer;
 }
-
-.popupWrapper {
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid black;
-  padding: 10px;
-  z-index: 1;
-  width: 10em;
-}
-
-.popupWrapper.corey {
-  left: 80%;
-}
-
-.popupWrapper.kaitlyn {
-  left: 80%;
-}
-
-.popupWrapper.giovana {
-  left: 80%;
-}
-
-.popupWrapper.sara {
-  left: 80%;
-}
-
-
