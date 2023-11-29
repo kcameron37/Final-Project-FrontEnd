@@ -8,6 +8,7 @@ export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
   const [editingJobId, setEditingJobId] = useState(null);
   const [editedJob, setEditedJob] = useState({});
 
+  // Existing filtering logic
   const filteredJobs = filterType && filterValue
     ? jobs.filter(job => job[filterType].toString() === filterValue)
     : jobs;

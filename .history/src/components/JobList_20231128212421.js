@@ -8,6 +8,7 @@ export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
   const [editingJobId, setEditingJobId] = useState(null);
   const [editedJob, setEditedJob] = useState({});
 
+  // Existing filtering logic
   const filteredJobs = filterType && filterValue
     ? jobs.filter(job => job[filterType].toString() === filterValue)
     : jobs;
@@ -93,7 +94,7 @@ export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
                 </button>
                 <button
                   className={styles.deleteButton}
-                  onClick={() => deleteJob(job.id)} 
+                  onClick={() => deleteJob(job.id)} // Pass the job's ID, not the index
                 >
                   Delete
                 </button>
