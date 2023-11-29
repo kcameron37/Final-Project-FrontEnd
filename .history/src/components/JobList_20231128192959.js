@@ -2,37 +2,53 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from "./jobList.module.css";
 
-export default function JobList({ jobs, deleteJob, setJobToEdit }) {
+export default function JobList({ jobs, deleteJob, setJobToEdit, jobToEdit }) {
   const { filterType, filterValue } = useParams();
-
-  // Filtering logic based on URL parameters
-  const filteredJobs = filterType && filterValue
-    ? jobs.filter(job => job[filterType].toString() === filterValue)
-    : jobs;
 
   const handleEditClick = (job) => {
     setJobToEdit(job);
   };
+
+  const isEditing = (job) => {
+    return jobToEdit && job.id === jobToEdit.id;
+  };
+
+   // Filtering logic based on URL parameters
+   const filteredJobs = filterType && filterValue
+   ? jobs.filter(job => job[filterType].toString() === filterValue)
+   : jobs;
 
   return (
     <div className={styles.jobListContainer}>
       <h2 className={styles.h2}>Featured Jobs</h2>
       {filteredJobs.map((job, index) => (
         <div key={index} className={styles.jobItem}>
-          <div className={styles.titleLine}>
-            <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-            <button
-              className={styles.editButton}
-              onClick={() => handleEditClick(job)}
-            >
-              Edit
-            </button>
-            <button
-              className={styles.deleteButton}
-              onClick={() => deleteJob(index)}
-            >
-              Delete
-            </button>
+               {isEditing(job) ? (
+            <div>
+              <input
+                type="text"
+                name="jobTitle"
+                defaultValue={jobToEdit.jobTitle}
+              />
+              <button onClick={() => setJobToEdit(null)}>Cancel</button>
+              <button onClick={() => {/* logic to handle save */}}>Save</button>
+            </div>
+          ) : (
+            <div>
+              <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
+              {/* Display other job details */}
+              <button
+                className={styles.editButton}
+                onClick={() => handleEditClick(job)}
+              >
+                Edit
+              </button>
+              <button
+                className={styles.deleteButton}
+                onClick={() => deleteJob(index)}
+              >
+                Delete
+              </button>
           </div>
 
           <div className={styles.companyInfo}>

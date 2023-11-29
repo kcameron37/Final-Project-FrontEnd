@@ -14,22 +14,16 @@ export default function AddJob({ addJob, jobToEdit, updateJob }) {
   useEffect(() => {
     if (jobToEdit) {
       setJob(jobToEdit);
-    } else {
-      // Reset form when not editing
-      setJob({
-        companyName: "",
-        jobTitle: "",
-        employment: "Full Time",
-        location: "",
-        salary: "",
-        description: "",
-      });
     }
   }, [jobToEdit]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addJob(job);
+    if (jobToEdit) {
+      updateJob(job); // Handle job update
+    } else {
+      addJob(job); // Handle adding new job
+    }
     setJob({
       companyName: "",
       jobTitle: "",
@@ -135,7 +129,7 @@ export default function AddJob({ addJob, jobToEdit, updateJob }) {
 
         <div className={styles.formRow}>
           <button className={styles.button} type="submit">
-            {jobToEdit ? "Update Job" : "Add Job"}
+            Add Job
           </button>
         </div>
       </div>

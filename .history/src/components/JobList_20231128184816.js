@@ -6,13 +6,9 @@ export default function JobList({ jobs, deleteJob, setJobToEdit }) {
   const { filterType, filterValue } = useParams();
 
   // Filtering logic based on URL parameters
-  const filteredJobs = filterType && filterValue
-    ? jobs.filter(job => job[filterType].toString() === filterValue)
-    : jobs;
-
-  const handleEditClick = (job) => {
-    setJobToEdit(job);
-  };
+  const filteredJobs = filterType && filterValue 
+  ? jobs.filter(job => job[filterType].toString() === filterValue)
+  : jobs;
 
   return (
     <div className={styles.jobListContainer}>
@@ -23,7 +19,7 @@ export default function JobList({ jobs, deleteJob, setJobToEdit }) {
             <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
             <button
               className={styles.editButton}
-              onClick={() => handleEditClick(job)}
+              onClick={() => console.log("Make Edit Do Something")}
             >
               Edit
             </button>
@@ -48,7 +44,7 @@ export default function JobList({ jobs, deleteJob, setJobToEdit }) {
           <p className={styles.jobDescription}>{job.description}</p>
         </div>
       ))}
-      <div className={styles.jobListContainer}>
+  <div className={styles.jobListContainer}>
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Software Developer</h3>

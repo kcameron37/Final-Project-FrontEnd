@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from "./jobList.module.css";
 
-export default function JobList({ jobs, deleteJob, setJobToEdit }) {
+export default function JobList({ jobs, deleteJob, setJobToEdit, jobToEdit }) {
   const { filterType, filterValue } = useParams();
 
   // Filtering logic based on URL parameters
@@ -12,6 +12,10 @@ export default function JobList({ jobs, deleteJob, setJobToEdit }) {
 
   const handleEditClick = (job) => {
     setJobToEdit(job);
+  };
+
+   const isEditing = (job) => {
+    return jobToEdit && job.id === jobToEdit.id;
   };
 
   return (

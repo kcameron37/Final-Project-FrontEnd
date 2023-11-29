@@ -12,13 +12,11 @@ export default function App() {
 
   const addJob = (job) => {
     if (jobToEdit) {
-      // Update existing job
       const updatedJobs = jobs.map(j => (j.id === jobToEdit.id ? { ...j, ...job } : j));
       setJobs(updatedJobs);
-      setJobToEdit(null); // Reset edit state
+      setJobToEdit(null); 
     } else {
-      // Add new job with a unique ID
-      const newJobWithId = { ...job, id: Date.now() }; // Simple ID generation
+      const newJobWithId = { ...job, id: Date.now() }; 
       setJobs([...jobs, newJobWithId]);
     }
   };

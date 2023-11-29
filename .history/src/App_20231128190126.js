@@ -8,18 +8,17 @@ import NavBar from './components/NavBar';
 
 export default function App() {
   const [jobs, setJobs] = useState([]);
-  const [jobToEdit, setJobToEdit] = useState(null);
+  const [jobToEdit, setJobToEdit] = useState(null); 
 
   const addJob = (job) => {
     if (jobToEdit) {
       // Update existing job
-      const updatedJobs = jobs.map(j => (j.id === jobToEdit.id ? { ...j, ...job } : j));
+      const updatedJobs = jobs.map(j => (j.id === jobToEdit.id ? job : j));
       setJobs(updatedJobs);
       setJobToEdit(null); // Reset edit state
     } else {
-      // Add new job with a unique ID
-      const newJobWithId = { ...job, id: Date.now() }; // Simple ID generation
-      setJobs([...jobs, newJobWithId]);
+      // Add new job
+      setJobs([...jobs, job]);
     }
   };
 

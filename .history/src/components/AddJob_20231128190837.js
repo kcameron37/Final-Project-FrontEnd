@@ -29,7 +29,11 @@ export default function AddJob({ addJob, jobToEdit, updateJob }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addJob(job);
+    if (jobToEdit) {
+      updateJob(job); // Handle job update
+    } else {
+      addJob(job); // Handle adding new job
+    }
     setJob({
       companyName: "",
       jobTitle: "",

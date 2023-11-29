@@ -5,6 +5,11 @@ import styles from "./jobList.module.css";
 export default function JobList({ jobs, deleteJob, setJobToEdit }) {
   const { filterType, filterValue } = useParams();
 
+  const handleEditClick = (job) => {
+    setJobToEdit(job); // Set the job to be edited
+  };
+
+
   // Filtering logic based on URL parameters
   const filteredJobs = filterType && filterValue
     ? jobs.filter(job => job[filterType].toString() === filterValue)

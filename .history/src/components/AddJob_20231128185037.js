@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./addJob.module.css";
 
-export default function AddJob({ addJob, jobToEdit, updateJob }) {
+const AddJob = ({ addJob, editJob, jobToEdit }) => {
   const [job, setJob] = useState({
     companyName: "",
     jobTitle: "",
@@ -14,16 +14,6 @@ export default function AddJob({ addJob, jobToEdit, updateJob }) {
   useEffect(() => {
     if (jobToEdit) {
       setJob(jobToEdit);
-    } else {
-      // Reset form when not editing
-      setJob({
-        companyName: "",
-        jobTitle: "",
-        employment: "Full Time",
-        location: "",
-        salary: "",
-        description: "",
-      });
     }
   }, [jobToEdit]);
 
@@ -135,7 +125,7 @@ export default function AddJob({ addJob, jobToEdit, updateJob }) {
 
         <div className={styles.formRow}>
           <button className={styles.button} type="submit">
-            {jobToEdit ? "Update Job" : "Add Job"}
+            Add Job
           </button>
         </div>
       </div>
