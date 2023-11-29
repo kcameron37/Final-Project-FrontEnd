@@ -33,8 +33,6 @@
   padding: 0px 12px 40px 12px;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 1em;
-
 }
 
 .popupWrapper {
@@ -84,12 +82,12 @@
   border: 2px solid black;
   padding: 10px;
   z-index: 1;
-  width: 10em;
+  width: 12em;
 }
 
 .popupWrapper.corey {
   top: calc(100% + 10px);
-  left: 56%;
+  left:52%;
 }
 
 .popupWrapper.kaitlyn {
@@ -99,12 +97,10 @@
 
 .popupWrapper.giovana {
   top: calc(100% + 10px);
-  left: 73%;
+  left: 75%;
 }
 
 .popupWrapper.sara {
   top: calc(100% + 10px);
-  left: 81%;
+  left: 85%;
 }
-
-

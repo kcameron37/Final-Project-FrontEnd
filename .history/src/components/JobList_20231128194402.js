@@ -1,27 +1,54 @@
-# Final-Project-FrontEnd
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import styles from "./jobList.module.css";
 
-## Project By:
+export default function JobList({ jobs, deleteJob, setJobToEdit }) {
+  const { filterType, filterValue } = useParams();
 
-Corey Rutt, Giovana Birck, Kaitlyn Cameron, Sara Shiojima
-D3 - Set H
+  // Filtering logic based on URL parameters
+  const filteredJobs = filterType && filterValue 
+    ? jobs.filter(job => job[filterType].toString() === filterValue)
+    : jobs;
 
-## Description
+    const handleEditClick = (job) => {
+      setJobToEdit(job); 
+    };
 
-Our Local Job Board simplifies job posting and searching. Interact with job listings, edit or delete your posts, and filter jobs by city or area for a convenient experience.
+  return (
+    <div className={styles.jobListContainer}>
+      <h2 className={styles.h2}>Featured Jobs</h2>
+      {filteredJobs.map((job, index) => (
+        <div key={index} className={styles.jobItem}>
+          <div className={styles.titleLine}>
+            <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
+            <button
+              className={styles.editButton}
+              onClick={() => handleEditClick(job)}
+            >
+              Edit
+            </button>
+            <button
+              className={styles.deleteButton}
+              onClick={() => deleteJob(index)}
+            >
+              Delete
+            </button>
+          </div>
 
-## Commands
-
-npm start
-
-## Deployment
-
-[https://final-project-front-end-cyan.vercel.app/]
-
-
-
-
-
-<div className={styles.jobListContainer}>
+          <div className={styles.companyInfo}>
+            <div className={styles.companyName}>
+              <span>{job.companyName}</span>
+            </div>
+            <div className={styles.companyDetails}>
+              <span>{job.employment}</span>
+              <span>{job.location}</span>
+              <span>{job.salary}</span>
+            </div>
+          </div>
+          <p className={styles.jobDescription}>{job.description}</p>
+        </div>
+      ))}
+  <div className={styles.jobListContainer}>
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Software Developer</h3>
@@ -67,3 +94,7 @@ npm start
           </p>
         </div>
       </div>
+    </div>
+  );
+}
+

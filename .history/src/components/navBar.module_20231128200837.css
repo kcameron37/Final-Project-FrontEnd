@@ -1,3 +1,5 @@
+/* navBar.module.css */
+
 .logo {
   display: flex;
   align-items: center;
@@ -19,7 +21,7 @@
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 64px;
-  position: relative;
+  position: relative; /* Added for popup positioning */
 }
 
 .navBar img {
@@ -31,10 +33,9 @@
   font-weight: 600;
   border: none;
   padding: 0px 12px 40px 12px;
+  margin-right: 1em;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 1em;
-
 }
 
 .popupWrapper {
@@ -46,65 +47,22 @@
   border: 2px solid black;
   padding: 10px;
   z-index: 1; 
-  width: 15em; 
+  width: 10em; 
 }
 
 .popup {
+ 
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 2em;
 }
 
 .popup h3 {
   font-size: 18px;
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .popup li {
   font-size: 16px;
   margin-bottom: 8px;
-  margin-top: 10px;
 }
-
-.closeButton {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.popupWrapper {
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid black;
-  padding: 10px;
-  z-index: 1;
-  width: 10em;
-}
-
-.popupWrapper.corey {
-  top: calc(100% + 10px);
-  left: 56%;
-}
-
-.popupWrapper.kaitlyn {
-  top: calc(100% + 10px);
-  left: 65%;
-}
-
-.popupWrapper.giovana {
-  top: calc(100% + 10px);
-  left: 73%;
-}
-
-.popupWrapper.sara {
-  top: calc(100% + 10px);
-  left: 81%;
-}
-
-
