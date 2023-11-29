@@ -27,10 +27,6 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
     setEditedJob({});
   };
 
-  const handleCancelClick = () => {
-    setEditingJobId(null);
-    setEditedJob({});
-  };
 
   return (
     <div className={styles.jobListContainer}>
@@ -92,7 +88,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 </button>
                 <button
                   className={styles.deleteButton}
-                  onClick={() => deleteJob(job.id)}
+                  onClick={() => deleteJob(job.id)} 
                 >
                   Delete
                 </button>

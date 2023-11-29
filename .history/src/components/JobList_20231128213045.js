@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from "./jobList.module.css";
 
-export default function JobList({ jobs, deleteJob, updateJob }) {
+export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
   const { filterType, filterValue } = useParams();
 
   const [editingJobId, setEditingJobId] = useState(null);
@@ -17,6 +17,11 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
     setEditedJob(job);
   };
 
+  const handleSaveClick = () => {
+    updateJob(editingJobId, editedJob);
+    setEditingJobId(null);
+  };
+
   const handleChange = (e, field) => {
     setEditedJob({ ...editedJob, [field]: e.target.value });
   };
@@ -27,10 +32,6 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
     setEditedJob({});
   };
 
-  const handleCancelClick = () => {
-    setEditingJobId(null);
-    setEditedJob({});
-  };
 
   return (
     <div className={styles.jobListContainer}>
@@ -78,9 +79,9 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 onChange={(e) => handleChange(e, 'description')}
               />
               <button onClick={() => handleSave(job.id)}>Save</button>
-              <button onClick={handleCancelClick}>Cancel</button>
+
             </div>
-          ) : (
+           ) : (
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
@@ -92,69 +93,27 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 </button>
                 <button
                   className={styles.deleteButton}
-                  onClick={() => deleteJob(job.id)}
+                  onClick={() => deleteJob(job.id)} 
                 >
                   Delete
                 </button>
-
               </div>
               <div className={styles.companyInfo}>
-                <p>{job.companyName}</p>
-                <p>{job.employmentType}</p>
-                <p>{job.salary}</p>
-                <p>{job.location}</p>
+                <div className={styles.companyName}>
+                  <span>{job.companyName}</span>
+                </div>
+                {/* Ensure the employmentType property is correctly named and exists on job objects */}
+                <div className={styles.companyDetails}>
+                  <span>{job.employmentType}</span>
+                  <span>{job.location}</span>
+                  <span>{job.salary}</span>
+                </div>
               </div>
               <p className={styles.jobDescription}>{job.description}</p>
             </div>
           )}
         </div>
       ))}
-      <div className={styles.jobListContainer}>
-        <div className={styles.jobItem}>
-          <div className={styles.titleLine}>
-            <h3 className={styles.jobTitle}>Software Developer</h3>
-
-            <div className={styles.companyInfo}>
-              <div className={styles.companyName}>
-                <span>Tech Solutions Inc.</span>
-              </div>
-            </div>
-            <div className={styles.companyDetails}>
-              <span>Full Time</span>
-              <span>Vancouver, BC</span>
-              <span>$100,000</span>
-            </div>
-          </div>
-          <p className={styles.jobDescription}>
-            We are seeking a talented software developer to join our dynamic
-            team. The ideal candidate will have strong programming skills and a
-            passion for creating innovative software solutions.
-          </p>
-        </div>
-      </div>
-
-      <div className={styles.jobListContainer}>
-        <div className={styles.jobItem}>
-          <div className={styles.titleLine}>
-            <h3 className={styles.jobTitle}>Marketing Specialist</h3>
-            <div className={styles.companyInfo}>
-              <div className={styles.companyName}>
-                <span>Digital Marketing Agency</span>
-              </div>
-            </div>
-            <div className={styles.companyDetails}>
-              <span>Full Time</span>
-              <span>Vancouver, BC</span>
-              <span>$200,000</span>
-            </div>
-          </div>
-          <p className={styles.jobDescription}>
-            Join our marketing team to develop and implement creative marketing
-            strategies. The ideal candidate will have a strong understanding of
-            digital marketing trends and excellent communication skills
-          </p>
-        </div>
-      </div>
     </div>
   );
 }

@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from "./jobList.module.css";
 
-export default function JobList({ jobs, deleteJob, updateJob }) {
+export default function JobList({ jobs, deleteJob, setJobToEdit, updateJob }) {
   const { filterType, filterValue } = useParams();
 
   const [editingJobId, setEditingJobId] = useState(null);
   const [editedJob, setEditedJob] = useState({});
 
+  // Existing filtering logic
   const filteredJobs = filterType && filterValue
     ? jobs.filter(job => job[filterType].toString() === filterValue)
     : jobs;
@@ -15,6 +16,11 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
   const handleEditClick = (job) => {
     setEditingJobId(job.id);
     setEditedJob(job);
+  };
+
+  const handleSaveClick = () => {
+    updateJob(editingJobId, editedJob);
+    setEditingJobId(null);
   };
 
   const handleChange = (e, field) => {
@@ -27,10 +33,6 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
     setEditedJob({});
   };
 
-  const handleCancelClick = () => {
-    setEditingJobId(null);
-    setEditedJob({});
-  };
 
   return (
     <div className={styles.jobListContainer}>
@@ -78,7 +80,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 onChange={(e) => handleChange(e, 'description')}
               />
               <button onClick={() => handleSave(job.id)}>Save</button>
-              <button onClick={handleCancelClick}>Cancel</button>
+
             </div>
           ) : (
             <div>
@@ -92,7 +94,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 </button>
                 <button
                   className={styles.deleteButton}
-                  onClick={() => deleteJob(job.id)}
+                  onClick={() => deleteJob(job.id)} 
                 >
                   Delete
                 </button>
