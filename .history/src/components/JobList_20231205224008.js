@@ -102,7 +102,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-                <div className={styles.buttonGroup}>
+                <div className={styles.buttonGroup}> {/* Container for the buttons */}
                   <button
                     className={styles.editButton}
                     onClick={() => handleEditClick(job)}

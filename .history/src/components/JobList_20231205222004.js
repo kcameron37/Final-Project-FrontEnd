@@ -38,28 +38,21 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
       {filteredJobs.map((job) => (
         <div key={job.id} className={styles.jobItem}>
           {editingJobId === job.id ? (
-            <div className={styles.formContainer}>
-              <label htmlFor={`companyName-${job.id}`} className={styles.inputLabel}>Company Name</label>
+            <div>
               <input
-                id={`companyName-${job.id}`}
                 className={styles.inputField}
                 placeholder="Company Name"
+                label="Company Name"
                 value={editedJob.companyName || ''}
                 onChange={(e) => handleChange(e, 'companyName')}
               />
-
-              <label htmlFor={`jobTitle-${job.id}`} className={styles.inputLabel}>Job Title</label>
               <input
-                id={`jobTitle-${job.id}`}
                 className={styles.inputField}
                 placeholder="Job Title"
                 value={editedJob.jobTitle || ''}
                 onChange={(e) => handleChange(e, 'jobTitle')}
               />
-
-              <label htmlFor={`employmentType-${job.id}`} className={styles.inputLabel}>Employment Type</label>
               <select
-                id={`employmentType-${job.id}`}
                 className={styles.inputField}
                 value={editedJob.employmentType || ''}
                 onChange={(e) => handleChange(e, 'employmentType')}
@@ -67,55 +60,44 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
               </select>
-
-              <label htmlFor={`location-${job.id}`} className={styles.inputLabel}>Location</label>
               <input
-                id={`location-${job.id}`}
                 className={styles.inputField}
                 placeholder="Location"
                 value={editedJob.location || ''}
                 onChange={(e) => handleChange(e, 'location')}
               />
-
-              <label htmlFor={`salary-${job.id}`} className={styles.inputLabel}>Salary</label>
               <input
-                id={`salary-${job.id}`}
                 className={styles.inputField}
                 placeholder="Salary"
                 value={editedJob.salary || ''}
                 onChange={(e) => handleChange(e, 'salary')}
               />
-
-              <label htmlFor={`description-${job.id}`} className={styles.inputLabel}>Job Description</label>
               <textarea
-                id={`description-${job.id}`}
                 className={styles.textAreaField}
                 placeholder="Job Description"
                 value={editedJob.description || ''}
                 onChange={(e) => handleChange(e, 'description')}
               />
-
-              <button onClick={() => handleSave(job.id)} className={styles.button}>Save</button>
-              <button onClick={handleCancelClick} className={styles.button}>Cancel</button>
+              <button onClick={() => handleSave(job.id)}>Save</button>
+              <button onClick={handleCancelClick}>Cancel</button>
             </div>
           ) : (
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-                <div className={styles.buttonGroup}>
-                  <button
-                    className={styles.editButton}
-                    onClick={() => handleEditClick(job)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className={styles.deleteButton}
-                    onClick={() => deleteJob(job.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  className={styles.editButton}
+                  onClick={() => handleEditClick(job)}
+                >
+                  Edit
+                </button>
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => deleteJob(job.id)}
+                >
+                  Delete
+                </button>
+
               </div>
               <div className={styles.companyInfo}>
                 <p>{job.companyName}</p>

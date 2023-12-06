@@ -4,9 +4,7 @@
   }
 
 .titleLine{
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
+    display: flex;
 }
 
 .jobItem {
@@ -44,11 +42,6 @@
     
   }
   
-  .buttonGroup {
-    display: flex;
-    gap: 8px; 
-  }
-
   .editButton,
   .deleteButton {
     padding: 8px 16px;
@@ -57,11 +50,18 @@
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 10px; 
+    margin-left: 8px; 
+  }
+  
+  .editButton {
     background-color: rgb(231, 231, 231); 
   }
   
-
+  .deleteButton {
+    background-color:rgb(231, 231, 231); 
+  }
+  
   .jobDescription {
     font-size: 16px;
   }
@@ -79,15 +79,15 @@
   .inputField,
   .textAreaField {
     width: 100%; 
-    padding: 8px; 
-    margin-top: 5px; 
-    margin-bottom: 10px;
-    border: 1px solid #ccc; 
-    box-sizing: border-box; 
+    padding: 8px; /* Padding inside the input field */
+    margin-top: 5px; /* Space between label and input field */
+    margin-bottom: 10px; /* Space below the input field */
+    border: 1px solid #ccc; /* Light grey border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
   
   .button {
     padding: 10px;
-    margin-top: 10px; 
+    margin-top: 10px; /* Space above the button */
   }
   

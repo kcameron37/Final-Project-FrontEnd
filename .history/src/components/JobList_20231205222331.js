@@ -38,7 +38,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
       {filteredJobs.map((job) => (
         <div key={job.id} className={styles.jobItem}>
           {editingJobId === job.id ? (
-            <div className={styles.formContainer}>
+            <div>
               <label htmlFor={`companyName-${job.id}`} className={styles.inputLabel}>Company Name</label>
               <input
                 id={`companyName-${job.id}`}
@@ -95,27 +95,26 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                 onChange={(e) => handleChange(e, 'description')}
               />
 
-              <button onClick={() => handleSave(job.id)} className={styles.button}>Save</button>
-              <button onClick={handleCancelClick} className={styles.button}>Cancel</button>
+              <button onClick={() => handleSave(job.id)}>Save</button>
+              <button onClick={handleCancelClick}>Cancel</button>
             </div>
           ) : (
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-                <div className={styles.buttonGroup}>
-                  <button
-                    className={styles.editButton}
-                    onClick={() => handleEditClick(job)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className={styles.deleteButton}
-                    onClick={() => deleteJob(job.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  className={styles.editButton}
+                  onClick={() => handleEditClick(job)}
+                >
+                  Edit
+                </button>
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => deleteJob(job.id)}
+                >
+                  Delete
+                </button>
+
               </div>
               <div className={styles.companyInfo}>
                 <p>{job.companyName}</p>

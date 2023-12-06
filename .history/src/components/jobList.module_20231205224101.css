@@ -20,6 +20,7 @@
   .jobTitle {
     font-size: 24px; 
     margin-bottom: 10px;
+    /* margin-left: auto;  */
   }
   
   .companyInfo {
@@ -46,7 +47,7 @@
   
   .buttonGroup {
     display: flex;
-    gap: 8px; 
+    gap: 8px; /* Adjust the gap between the buttons as needed */
   }
 
   .editButton,

@@ -20,6 +20,7 @@
   .jobTitle {
     font-size: 24px; 
     margin-bottom: 10px;
+    /* margin-left: auto;  */
   }
   
   .companyInfo {
@@ -45,22 +46,23 @@
   }
   
   .buttonGroup {
-    display: flex;
-    gap: 8px; 
+    display: flex; /* This will align your buttons horizontally */
+    gap: 8px; /* Adjust the gap between the buttons as needed */
   }
 
   .editButton,
   .deleteButton {
+    /* If these buttons need to be on the right, they should not have an order set to -1 */
     padding: 8px 16px;
     color: black;
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 10px; 
+    margin-left: 8px; /* This can remain as is to give some space between the buttons */
     background-color: rgb(231, 231, 231); 
   }
-  
 
   .jobDescription {
     font-size: 16px;

@@ -5,7 +5,7 @@
 
 .titleLine{
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between; /* This will space out the job title to the left and the buttons to the right */
   align-items: center;
 }
 
@@ -44,11 +44,6 @@
     
   }
   
-  .buttonGroup {
-    display: flex;
-    gap: 8px; 
-  }
-
   .editButton,
   .deleteButton {
     padding: 8px 16px;
@@ -57,10 +52,10 @@
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 10px; 
+    margin-left: 8px; 
     background-color: rgb(231, 231, 231); 
   }
-  
 
   .jobDescription {
     font-size: 16px;

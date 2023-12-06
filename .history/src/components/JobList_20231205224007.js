@@ -100,23 +100,23 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
             </div>
           ) : (
             <div>
-              <div className={styles.titleLine}>
-                <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-                <div className={styles.buttonGroup}>
-                  <button
-                    className={styles.editButton}
-                    onClick={() => handleEditClick(job)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className={styles.deleteButton}
-                    onClick={() => deleteJob(job.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
+         <div className={styles.titleLine}>
+  <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
+  <div className={styles.buttonGroup}> {/* Container for the buttons */}
+    <button
+      className={styles.editButton}
+      onClick={() => handleEditClick(job)}
+    >
+      Edit
+    </button>
+    <button
+      className={styles.deleteButton}
+      onClick={() => deleteJob(job.id)}
+    >
+      Delete
+    </button>
+  </div>
+</div>
               <div className={styles.companyInfo}>
                 <p>{job.companyName}</p>
                 <p>{job.employmentType}</p>

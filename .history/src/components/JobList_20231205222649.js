@@ -88,34 +88,33 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
 
               <label htmlFor={`description-${job.id}`} className={styles.inputLabel}>Job Description</label>
               <textarea
-                id={`description-${job.id}`}
-                className={styles.textAreaField}
-                placeholder="Job Description"
-                value={editedJob.description || ''}
-                onChange={(e) => handleChange(e, 'description')}
-              />
+      id={`description-${job.id}`}
+      className={styles.textAreaField}
+      placeholder="Job Description"
+      value={editedJob.description || ''}
+      onChange={(e) => handleChange(e, 'description')}
+    />
 
-              <button onClick={() => handleSave(job.id)} className={styles.button}>Save</button>
-              <button onClick={handleCancelClick} className={styles.button}>Cancel</button>
+              <button onClick={() => handleSave(job.id)}>Save</button>
+              <button onClick={handleCancelClick}>Cancel</button>
             </div>
           ) : (
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
-                <div className={styles.buttonGroup}>
-                  <button
-                    className={styles.editButton}
-                    onClick={() => handleEditClick(job)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className={styles.deleteButton}
-                    onClick={() => deleteJob(job.id)}
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  className={styles.editButton}
+                  onClick={() => handleEditClick(job)}
+                >
+                  Edit
+                </button>
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => deleteJob(job.id)}
+                >
+                  Delete
+                </button>
+
               </div>
               <div className={styles.companyInfo}>
                 <p>{job.companyName}</p>
