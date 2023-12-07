@@ -50,7 +50,7 @@ export default function NavBar() {
         <h2>JOB BOARD</h2>
       </div>
 
-      <div>
+      <div className={styles.names}>
         <button onClick={() => togglePopup("corey")}>Corey J. Rutt</button>
         {popups.corey && (
           <div className={`${styles.popupWrapper} ${styles.corey}`} ref={popupRefs.corey}>

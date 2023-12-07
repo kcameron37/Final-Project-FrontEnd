@@ -1,3 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px 20px; 
+}
+
+.container h2 {
+  font-size: 24px;
+}
+  
   .jobListContainer {
     max-width: 1100px; 
     margin: auto; 
@@ -91,3 +104,16 @@
     margin-top: 10px; 
   }
   
+
+  @media only screen and (max-width: 414px) {
+    .container {
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 10px;
+      margin: 0px 10px; 
+    }
+  
+    .container h2 {
+      font-size: 19px;
+    }
+  }
