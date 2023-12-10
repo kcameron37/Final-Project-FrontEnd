@@ -102,6 +102,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
             <div>
               <div className={styles.titleLine}>
                 <h3 className={styles.jobTitle}>{job.jobTitle}</h3>
+                </div>
                 <div className={styles.buttonGroup}>
                   <button
                     className={styles.editButton}
@@ -116,8 +117,8 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
                     Delete
                   </button>
                 </div>
-              </div>
-              <div className={styles.companyInfo}>
+             
+                <div className={styles.companyDetails}>
                 <p>{job.companyName}</p>
                 <p>{job.employmentType}</p>
                 <p>{job.salary}</p>
@@ -132,18 +133,19 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Software Developer</h3>
-
+            </div>
             <div className={styles.companyInfo}>
               <div className={styles.companyName}>
                 <span>Tech Solutions Inc.</span>
               </div>
+             
             </div>
             <div className={styles.companyDetails}>
-              <span>Full Time</span>
-              <span>Vancouver, BC</span>
-              <span>$100,000</span>
+            <div className={styles.jobType}>Full Time</div>
+            <div className={styles.location}>Vancouver, BC</div>
+             <div className={styles.money}>$100,000</div>
             </div>
-          </div>
+          
           <p className={styles.jobDescription}>
             We are seeking a talented software developer to join our dynamic
             team. The ideal candidate will have strong programming skills and a
@@ -156,6 +158,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Marketing Specialist</h3>
+            </div>
             <div className={styles.companyInfo}>
               <div className={styles.companyName}>
                 <span>Digital Marketing Agency</span>
@@ -166,7 +169,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
               <span>Vancouver, BC</span>
               <span>$200,000</span>
             </div>
-          </div>
+          
           <p className={styles.jobDescription}>
             Join our marketing team to develop and implement creative marketing
             strategies. The ideal candidate will have a strong understanding of

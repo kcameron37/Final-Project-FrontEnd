@@ -116,4 +116,13 @@
     .container h2 {
       font-size: 19px;
     }
+
+    .companyDetails {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail {
+      margin-bottom: 8px; 
+    }
   }
