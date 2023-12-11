@@ -2,18 +2,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function FilterComponent({ jobs }) {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const uniqueLocations = getUniqueValues(jobs, 'location');
-  const uniqueJobTitles = getUniqueValues(jobs, 'jobTitle');
-
-  const handleFilterChange = (filterType, value) => {
-    if (value === "") {
-      navigate(`/`);
-    } else {
-      navigate(`/filter/${filterType}/${value}`);
-    }
-  };
+    const uniqueLocations = getUniqueValues(jobs, 'location');
+    const uniqueJobTitles = getUniqueValues(jobs, 'jobTitle');
+  
+    const handleFilterChange = (filterType, value) => {
+      if (value === "") {
+        navigate(`/`); // Navigate to base route to reset the filter
+      } else {
+        navigate(`/filter/${filterType}/${value}`);
+      }
+    };
 
   if (jobs.length === 0) {
     return <p>No Jobs Available</p>;
@@ -24,7 +24,7 @@ function FilterComponent({ jobs }) {
       <div>
         <label>Location:</label>
         <select onChange={(e) => handleFilterChange('location', e.target.value)}>
-          <option value="">All Locations</option>
+          <option value="">All Locations</option> {/* Reset option */}
           {uniqueLocations.map(location => (
             <option key={location} value={location}>{location}</option>
           ))}
@@ -34,7 +34,7 @@ function FilterComponent({ jobs }) {
       <div>
         <label>Job Title:</label>
         <select onChange={(e) => handleFilterChange('jobTitle', e.target.value)}>
-          <option value="">All Job Titles</option>
+          <option value="">All Job Titles</option> {/* Reset option */}
           {uniqueJobTitles.map(title => (
             <option key={title} value={title}>{title}</option>
           ))}
