@@ -129,7 +129,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
           )}
         </div>
       ))}
-      <div className={styles.jobListContainer}>
+      {/* <div className={styles.jobListContainer}>
         <div className={styles.jobItem}>
           <div className={styles.titleLine}>
             <h3 className={styles.jobTitle}>Software Developer</h3>
@@ -176,7 +176,7 @@ export default function JobList({ jobs, deleteJob, updateJob }) {
             digital marketing trends and excellent communication skills
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.filterText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: '100%';
+    text-align: center;
+    font-size: 8;
+}
+
+.filterRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.filterRow select {
+    width: 100%;
+    padding: 12px;
+    font-family: 14px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin: 10px,
+  }

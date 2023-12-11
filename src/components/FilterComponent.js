@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from "./FilterComponent.module.css";
 
 function FilterComponent({ jobs }) {
   const navigate = useNavigate();
@@ -16,13 +17,12 @@ function FilterComponent({ jobs }) {
   };
 
   if (jobs.length === 0) {
-    return <p>No Jobs Available</p>;
+    return <p className={styles.filterText}>No Jobs Available. Add a job to view the filters.</p>;
   }
 
   return (
-    <div>
-      <div>
-        <label>Location:</label>
+    <div className={styles.filterRow}>
+      <div className={styles.filterLeft}>
         <select onChange={(e) => handleFilterChange('location', e.target.value)}>
           <option value="">All Locations</option>
           {uniqueLocations.map(location => (
@@ -31,8 +31,7 @@ function FilterComponent({ jobs }) {
         </select>
       </div>
 
-      <div>
-        <label>Job Title:</label>
+      <div className={styles.filterLeft}>
         <select onChange={(e) => handleFilterChange('jobTitle', e.target.value)}>
           <option value="">All Job Titles</option>
           {uniqueJobTitles.map(title => (
